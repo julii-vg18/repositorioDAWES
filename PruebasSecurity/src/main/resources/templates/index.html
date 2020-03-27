@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Index</title>
 </head>
 <body>
 
+<a th:href="@{/index}">Home</a>
+
+<a th:href="@{/registrado}">Usuario Registrado</a>
+
+<a th:href="@{/admin}">Admin</a>
+
+<a th:href="@{/logout}">Logout</a>
 </body>
 </html>

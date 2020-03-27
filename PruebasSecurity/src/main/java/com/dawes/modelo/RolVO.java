@@ -13,18 +13,18 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "usuarios", uniqueConstraints = {@UniqueConstraint(name = "ROLES_UK" , columnNames = "Role_Name")})
+@Table(name = "usuarios", uniqueConstraints = { @UniqueConstraint(name = "ROLES_UK", columnNames = "Role_Name") })
 public class RolVO {
 
 	@Id
 	@GeneratedValue
 	@Column(name = "Role_Id", nullable = false)
 	private Long roleId;
-	
+
 	@Column(name = "Role_Name", length = 30, nullable = false)
 	private String roleName;
-	
-	@OneToMany(mappedBy = "rol", fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, orphanRemoval = true)
+
+	@OneToMany(mappedBy = "rol", fetch = FetchType.EAGER, cascade = { CascadeType.ALL }, orphanRemoval = true)
 	private List<UsuarioRolVO> roles;
 
 	public RolVO(Long roleId, String roleName, List<UsuarioRolVO> roles) {
@@ -109,9 +109,5 @@ public class RolVO {
 	public String toString() {
 		return "RolVO [roleId=" + roleId + ", roleName=" + roleName + ", roles=" + roles + "]";
 	}
-	
-	
 
-	
-	
 }

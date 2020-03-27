@@ -1,9 +1,10 @@
 package com.dawes.modelo;
 
-import javax.persistence.Column;
+import javax.persistence.Column; 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,9 +16,9 @@ import javax.persistence.UniqueConstraint;
 public class UsuarioRolVO {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Id", nullable = false)
-	private Long id;
+	private Integer id;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn (name = "User_Id", nullable = false)
@@ -27,7 +28,7 @@ public class UsuarioRolVO {
 	@JoinColumn(name = "Role_Id", nullable = false)
 	private RolVO rol;
 
-	public UsuarioRolVO(Long id, UsuarioVO usuario, RolVO rol) {
+	public UsuarioRolVO(Integer id, UsuarioVO usuario, RolVO rol) {
 		super();
 		this.id = id;
 		this.usuario = usuario;
@@ -44,11 +45,11 @@ public class UsuarioRolVO {
 		this.rol = rol;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
