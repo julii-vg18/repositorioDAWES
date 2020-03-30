@@ -1,16 +1,13 @@
 package com.dawes;
 
-import javax.persistence.Persistence;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PruebasRestApplication {
+public class TareaFinalDawesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PruebasRestApplication.class, args);
-		Persistence.generateSchema("jpa", null);
+		SpringApplication.run(TareaFinalDawesApplication.class, args);
 	}
 
 }

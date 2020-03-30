@@ -6,10 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.dawes.modelo.UsuarioVO;
 
 @Repository
-public interface UserRepository extends CrudRepository<UsuarioVO, Long> {
+public interface UsuarioRepository extends CrudRepository<UsuarioVO, Integer>{
 
-	public UsuarioVO findByUsername(String userName);
-	 
-	
+	public UsuarioVO findByUsername(String username);
 	
 }
