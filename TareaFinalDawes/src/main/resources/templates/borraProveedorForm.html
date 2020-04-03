@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+</head>
+<body>
+	<h1>Borra Proveedor</h1>
+	<form th:action="eliminaProveedor" method="post">
+		<p>DNI: <input type="text" name="dni"></p>
+		<input type="submit" value="Borrar">
+	</form>
+</body>
+</html>

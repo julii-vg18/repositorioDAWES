@@ -5,13 +5,22 @@
 <title>Inicio</title>
 </head>
 <body>
-	<h1>Works</h1>
+	<h1>Proveedores</h1>
 	<table>
 		<tr>
-			<td><a th:href="@{proveedores}">Mostrar todos los proveedores</a></td>
+			<td><a th:href="@{/proveedores}">Mostrar todos los proveedores</a></td>
 		</tr>	
 		<tr>
-			<td><a th:href="@{proveedoresDni}">Buscar por DNI</a></td>
+			<td><a th:href="@{/proveedoresDni}">Buscar por DNI</a></td>
+		</tr>
+		<tr>
+			<td><a th:href="@{/nuevoProveedor}">Crear nuevo proveedor</a></td>
+		</tr>
+		<tr>
+			<td><a th:href="@{/borraProveedor}">Borra un proveedor</a></td>
+		</tr>
+		<tr>
+			<td><a th:href="@{/cambiaProveedor}">Modifica un proveedor</a></td>
 		</tr>
 	</table>
 </body>

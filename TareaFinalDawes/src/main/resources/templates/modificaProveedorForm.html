@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+</head>
+<body>
+	<h1>Modifica Proveedor</h1>
+	<form th:action="modificaProveedor" method="post">
+		<p>DNI: <input type="text" name="dni"></p>
+		<p>Nombre: <input type="text" name="nombre"></p>
+		<p>Apellido: <input type="text" name="apellido"></p>	
+		<p>Fecha: <input type="date" name="fecha"></p>
+		<input type="submit" value="Modificar">
+	</form>
+</body>
+</html>

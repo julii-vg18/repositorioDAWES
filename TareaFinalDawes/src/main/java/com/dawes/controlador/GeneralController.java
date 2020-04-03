@@ -12,9 +12,28 @@ public class GeneralController {
 		return "/index";
 	}
 	
-	@RequestMapping("/proveedoresDni")
-	public String formDni() {
-		return "formDNI";
+	@RequestMapping("/listaProveedores")
+	public String listaProveedores() {
+		return "/listaProveedores";
 	}
 	
+	@RequestMapping("/proveedoresDni")
+	public String formDni() {
+		return "/formDNI";
+	}
+	
+	@RequestMapping("/nuevoProveedor")
+	public String nuevoProveedor() {
+		return "/nuevoProveedorForm";
+	}
+	
+	@RequestMapping("/borraProveedor")
+	public String borrarProveedor() {
+		return "/borraProveedorForm";
+	}
+	
+	@RequestMapping("/cambiaProveedor")
+	public String cambiaProveedor() {
+		return "/modificaProveedorForm";
+	}
 }
